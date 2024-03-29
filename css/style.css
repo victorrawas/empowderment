@@ -1,0 +1,589 @@
+/* 
+---------------------------------------------------------------------------
+josh comeau css reset | (https://www.joshwcomeau.com/css/custom-css-reset/)
+---------------------------------------------------------------------------
+*/
+
+@import url(joshcomeau.css);
+
+/* 
+----------
+typography
+----------
+*/
+
+@font-face {
+  font-family: "reey";
+  src: url(../fonts/reey/Reey-Regular.woff2) format("woff2"),
+    url(../fonts/reey/Reey-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url(../fonts/raleway/Raleway-Regular.woff2) format("woff2"),
+    url(../fonts/raleway/Raleway-Regular.woff) format("woff");
+}
+
+/* 
+------------
+color scheme
+------------
+*/
+
+:root {
+  --blush-pink: hsl(338, 44%, 68%);
+  --peach: hsl(15, 100%, 75%);
+  --gold: hsl(33, 100%, 85%);
+  --white: #fff;
+  --black: #262626;
+}
+
+/* 
+--------------------
+setting the defaults
+--------------------
+*/
+
+body {
+  margin: 0 10px;
+
+  background-color: #fff;
+  font-family: "raleway", sans-serif;
+  font-size: 16px;
+  color: var(--black);
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+header,
+section {
+  margin-bottom: 2.75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2,
+h3,
+p {
+  margin: 1rem 0;
+}
+
+.full-bleed {
+  width: 100vw;
+}
+
+.btn {
+  /* display: block; */
+  background: var(--blush-pink);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 0.5rem;
+
+  text-align: center;
+  text-decoration: none;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px var(--black);
+  transition: 0.3s ease-in-out;
+}
+
+/* 
+---------
+container
+---------
+*/
+
+.container {
+  max-width: 62.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+/* 
+----------
+top banner
+----------
+*/
+
+.banner {
+  background: var(--blush-pink);
+
+  padding: 0.5rem;
+
+  text-align: center;
+}
+
+.banner > a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* 
+------
+header
+------
+*/
+
+.navigation-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigation-menu {
+  display: none;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.show {
+  display: block;
+}
+
+.logo {
+  font-family: "reey", sans-serif;
+  font-size: 2rem;
+  color: var(--black);
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.logo > span {
+  font-family: "reey", sans-serif;
+  color: var(--blush-pink);
+  margin: 0 3px 0 5px;
+}
+
+.home-link {
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+}
+
+.hamburger-menu .top,
+.hamburger-menu .middle,
+.hamburger-menu .bottom {
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  width: 2rem;
+  margin-bottom: 3px;
+}
+
+.hamburger-menu .top {
+  width: 1.1rem;
+}
+
+.hamburger-menu .bottom {
+  width: 1.5rem;
+}
+
+.navigation-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.navigation-menu ul li {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navigation-menu ul li a {
+  display: block;
+  color: var(--blush-pink);
+  text-decoration: none;
+}
+
+.navigation-menu ul li:hover a {
+  background: var(--blush-pink);
+  color: var(--white);
+}
+
+/* 
+------------
+hero section
+------------
+*/
+
+.hero-image {
+  /* border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; */
+  box-shadow: 5px 5px var(--blush-pink);
+  margin-bottom: 1.5rem;
+}
+
+/* 
+----------------
+promised section
+----------------
+*/
+
+.promise-card {
+  margin: 2rem 0;
+}
+
+/* 
+--------
+services
+--------
+*/
+
+.brides,
+.photographers {
+  cursor: pointer;
+}
+
+.brides > .cta.btn {
+  margin-bottom: 1rem;
+}
+
+.photographers {
+  margin-top: 2rem;
+}
+
+/* 
+-----------
+faq section
+-----------
+*/
+
+.faq-container {
+  margin-bottom: 2rem;
+}
+
+.accordion-container .accordion-title {
+  /* position: relative; */
+  margin: 0;
+  padding: 0.625em;
+  background-color: var(--blush-pink);
+  font-size: 1.25em;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-title.open {
+  background-color: var(--black);
+}
+
+.accordion-container .accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 2px;
+  transform: rotate(90deg);
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-container .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion-container .accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-container .accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  padding: 0.625em;
+  border: 1px solid #0079c1;
+}
+
+.accordion-content > ol {
+  padding-left: 1em;
+}
+
+.accordion-content a {
+  text-decoration: underline var(--blush-pink);
+  color: var(--blush-pink);
+}
+
+.accordion-content a:hover {
+  text-decoration: none;
+  background: var(--blush-pink);
+  color: var(--white);
+}
+
+.accordion-content table,
+.accordion-content th,
+.accordion-content td {
+  border: 1px solid var(--black);
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+.accordion-content tr:nth-child(odd) {
+  background: var(--blush-pink);
+}
+
+/* CSS for Demo
+.accordion-container {
+  max-width: 600px;
+  margin: 0 auto;
+} */
+
+/* 
+-------
+gallery
+-------
+*/
+
+.gallery a[data-lightbox] img {
+  margin-bottom: 1rem;
+}
+
+/* 
+-------
+booking
+-------
+*/
+
+.requirements,
+.requirements ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.requirements .for-brides h3::before {
+  content: "👰";
+}
+
+.requirements .for-brides li::before {
+  content: "💐";
+}
+
+.requirements .for-models h3::before {
+  content: "💁‍♀️";
+}
+
+.requirements .for-models li::before {
+  content: "📸";
+}
+
+/* 
+--------
+calendly
+--------
+*/
+
+.calendly-inline-widget {
+  max-width: 90%;
+}
+
+/* 
+------
+footer
+------
+*/
+
+.newsletter input {
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
+}
+
+.newsletter-signup-submit {
+  border: none;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+/* 
+-------------
+media queries
+-------------
+*/
+
+@media (min-width: 600px) {
+  /* hero section */
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .hero-content {
+    align-self: center;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-header {
+    font-size: 2rem;
+  }
+
+  /* promises section */
+  .promise {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .promise-image {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 180px;
+  }
+
+  /* gallery */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-header {
+    grid-area: 1 / 1 / 1 / 4;
+  }
+
+  /* .gallery a:nth-of-type(4) {
+    grid-area: 3 / 1 / 3 / 3;
+  } */
+
+  /* .gallery a:nth-of-type(7) {
+    grid-area: 3 / 3 / 4 / 3;
+  } */
+
+  .gallery .cta {
+    grid-area: 5 / 1 / 5 / 4;
+  }
+
+  /* calendly widget */
+
+  .calendly-inline-widget {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  /* navigation */
+
+  .navigation-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 100%;
+  }
+
+  .navigation-menu {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 1rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* hero section */
+  .hero {
+    display: flex;
+  }
+
+  .hero-content {
+    align-self: center;
+  }
+
+  .hero-cta {
+    max-width: 50%;
+  }
+
+  .hero-image {
+    max-width: 50%;
+  }
+
+  /* value prop section */
+  .valueprop-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valueprop-header {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+
+  /* services section */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .services-header {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+
+  /* faq section */
+  .faq {
+    max-width: 75%;
+  }
+
+  .book-a-call {
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .copyright-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
