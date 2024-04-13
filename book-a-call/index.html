@@ -173,18 +173,24 @@
             <div>
               <label for="source">How did you hear about my services?*</label>
               <select id="source" name="source" required>
+                <option disabled selected value> -- please select an option -- </option>
                 <option>Google</option>
                 <option>Instagram</option>
                 <option>Facebook</option>
                 <option>Referral from past bride</option>
                 <option>Referral from friend/family</option>
                 <option>Referral from vendor</option>
+                <option>Other</option>
               </select>
             </div>
 
             <div>
               <label for="question">Do you have any specific questions/notes that you'd like to add?</label>
               <input type="textarea" id="question" name="question" maxlength="150">
+            </div>
+
+            <div>
+              <input type="submit">
             </div>
 
           </form>
