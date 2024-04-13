@@ -80,7 +80,7 @@
             <!-- navigation call to action -->
             <li>
               <a href="../book-a-call/index.html" class="navigation-cta"
-                >Book a free call</a
+                >Booking</a
               >
             </li>
           </ul>
@@ -91,10 +91,10 @@
       <main>
         <div class="book-a-call">
           <div class="book-a-call-content">
-            <h1>Book a Call with me</h1>
+            <h1>Get in touch!</h1>
             <p>
               Ready to discuss your beauty needs and how I can make your vision
-              a reality? Booking a call is the first step to creating a
+              a reality? Filling out the inquiry form below is the first step to creating a
               personalized experience just for you. Whether you're a
               bride-to-be, a model, or a photographer looking to enhance your
               projects, I'm excited to connect with you and explore how I can
@@ -107,55 +107,11 @@
         <section>
           <h2>What to Expect:</h2>
           <p>
-            During our call, we'll dive into the details of your upcoming event,
-            photoshoot, or project. This is an opportunity for us to get to know
-            each other, discuss your preferences, and tailor our services to
-            meet your specific needs. Whether you have a clear vision in mind or
-            are seeking professional guidance, I'm here to ensure the process is
+            Once you submit the inquiry form below with the details of your upcoming event,
+            photoshoot, or project, you'll get an email back from me shortly afterwards. 
+            Whether you have a clear vision in mind or are seeking professional guidance, I'm here to ensure the process is
             seamless and enjoyable.
           </p>
-        </section>
-
-        <section>
-          <h2>How to Book:</h2>
-          <p>Booking a call is easy! Simply follow these steps:</p>
-          <ol>
-            <li>
-              Choose a date and time that suits your schedule from the calendar
-              below.
-            </li>
-            <li>
-              Add your contact info (phone/email) and any additional details
-              you'd like to share.
-            </li>
-            <li>Book your time!</li>
-          </ol>
-        </section>
-
-        <section>
-          <h2>What You Need:</h2>
-          <p>
-            To make the most of our call, consider having the following
-            information ready:
-          </p>
-          <ul class="requirements">
-            <li class="for-brides">
-              <h3>For Brides and Bridesmaids:</h3>
-              <ul>
-                <li>Wedding date and location</li>
-                <li>Preferred makeup style (e.g., natural, glamorous)</li>
-                <li>Any specific themes or inspirations</li>
-              </ul>
-            </li>
-            <li class="for-models">
-              <h3>For Photographers and Models:</h3>
-              <ul>
-                <li>Details about the photoshoot or project</li>
-                <li>Preferred makeup looks or styles</li>
-                <li>Desired outcomes and expectations</li>
-              </ul>
-            </li>
-          </ul>
         </section>
 
         <section class="get-started">
@@ -165,20 +121,73 @@
             enhance your beauty experience. I can't wait to chat and bring your
             vision to life!
           </p>
-        </section>
+        
 
-        <section>
-          <!-- Calendly inline widget begin -->
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/empowderment/15min?hide_gdpr_banner=1&primary_color=d18aa4"
-            style="min-width: 290px; height: 700px"
-          ></div>
-          <script
-            src="https://assets.calendly.com/assets/external/widget.js"
-            async
-          ></script>
-          <!-- Calendly inline widget end -->
+          <form action="" method="post">
+
+            <div>
+              <label for="fname">First Name*</label>
+              <input type="text" id="fname" name="fname" required>
+            </div>
+
+            <div>
+              <label for="lname">Last Name*</label>
+              <input type="text" id="lname" name="lname" required>
+            </div>
+            
+            <div>
+              <label for="">Email*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+              <label for="phone">Phone*</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div>
+              <label for="weddingdate">Wedding Date*</label>
+              <input type="date" id="weddingdate" name="weddingdate" required>
+            </div>
+
+            <div>
+              <label for="weddinglocation">Wedding Location*</label>
+              <input type="text" id="weddinglocation" name="weddinglocation" required>
+            </div>
+
+            <div>
+              <label for="readylocation">Getting Ready Location*</label>
+              <input type="text" id="readylocation" name="readylocation" required>
+            </div>
+
+            <div>
+              <label for="readytime">Time to be Ready*</label>
+              <input type="text" id="readytime" name="readytime" required>
+            </div>
+
+            <div>
+              <label for="quantity">How many people will be needing makeup?*</label>
+              <input type="number" id="quantity" name="quantity" min="0" max="99" required >
+            </div>
+
+            <div>
+              <label for="source">How did you hear about my services?*</label>
+              <select id="source" name="source" required>
+                <option>Google</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>Referral from past bride</option>
+                <option>Referral from friend/family</option>
+                <option>Referral from vendor</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="question">Do you have any specific questions/notes that you'd like to add?</label>
+              <input type="textarea" id="question" name="question" maxlength="150">
+            </div>
+
+          </form>
         </section>
       </main>
 
