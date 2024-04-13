@@ -390,14 +390,10 @@ booking
   content: "📸";
 }
 
-/* 
---------
-calendly
---------
-*/
+/* inquiry form */
 
-.calendly-inline-widget {
-  max-width: 90%;
+.get-started div {
+  margin-botton: 0.3rem;
 }
 
 /* 
